@@ -1,9 +1,16 @@
+import java.time.Duration;
+
+import pattern.command.Command;
+import pattern.command.ExtendedCommand;
 
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		System.out.println("helloooo");
+		Command command = new ExtendedCommand(Duration.parse("pt1s"));
+		System.out.println("Command must run at "+command.timeToRun());
+		command.run();
 	}
 
 }
